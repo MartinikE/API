@@ -1,0 +1,191 @@
+{
+	"info": {
+		"_postman_id": "a1238b49-e88e-4658-af9b-cccff725af70",
+		"name": "DummyAPI",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "20720133"
+	},
+	"item": [
+		{
+			"name": "20 users",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "https://dummyapi.io/data/v1/user?limit=20&page=2",
+					"protocol": "https",
+					"host": [
+						"dummyapi",
+						"io"
+					],
+					"path": [
+						"data",
+						"v1",
+						"user"
+					],
+					"query": [
+						{
+							"key": "limit",
+							"value": "20"
+						},
+						{
+							"key": "page",
+							"value": "2"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "create user",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"title\": \"mr\",\r\n    \"firstName\": \"Миша\",\r\n    \"lastName\": \"Riber\",\r\n    \"picture\": \"https://randomuser.me/api/portraits/med/men/10.jpg\",\r\n    \"email\": \"ohfy.ribeiro@example.com\"\r\n    }\r\n",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://dummyapi.io/data/v1/user/create",
+					"protocol": "https",
+					"host": [
+						"dummyapi",
+						"io"
+					],
+					"path": [
+						"data",
+						"v1",
+						"user",
+						"create"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "update user id",
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"id\": \"62710\",\r\n    \"firstName\": \"Mira\",\r\n    \"lastName\": \"wong\",\r\n    \"email\": \"mirwr.veng@example.com\",\r\n    \"registerDate\": \"2022-05-03T10:24:55.940Z\",\r\n    \"updatedDate\": \"2022-05-03T10:24:55.940Z\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://dummyapi.io/data/v1/user/627102f7cf4cdb6aafe5d9a8",
+					"protocol": "https",
+					"host": [
+						"dummyapi",
+						"io"
+					],
+					"path": [
+						"data",
+						"v1",
+						"user",
+						"627102f7cf4cdb6aafe5d9a8"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "change LastName to invalid value",
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"id\": \"627102f7cf4cdb6aafe5d9a8\",\r\n    \"firstName\": \"Марк\",\r\n    \"lastName\": \"з\",\r\n    \"email\": \"mirwr.veng@example.com\",\r\n    \"registerDate\": \"2022-05-03T10:24:55.940Z\",\r\n    \"updatedDate\": \"2022-06-03T10:24:55.940Z\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://dummyapi.io/data/v1/user/627102f7cf4cdb6aafe5d9a8",
+					"protocol": "https",
+					"host": [
+						"dummyapi",
+						"io"
+					],
+					"path": [
+						"data",
+						"v1",
+						"user",
+						"627102f7cf4cdb6aafe5d9a8"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Delete user",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"url": {
+					"raw": "https://dummyapi.io/data/v1/user/627102f7cf4cdb6aafe5d9a8",
+					"protocol": "https",
+					"host": [
+						"dummyapi",
+						"io"
+					],
+					"path": [
+						"data",
+						"v1",
+						"user",
+						"627102f7cf4cdb6aafe5d9a8"
+					]
+				}
+			},
+			"response": []
+		}
+	],
+	"auth": {
+		"type": "apikey",
+		"apikey": [
+			{
+				"key": "value",
+				"value": "627031c5ad3b0fb168b1d447",
+				"type": "string"
+			},
+			{
+				"key": "key",
+				"value": "app-id",
+				"type": "string"
+			}
+		]
+	},
+	"event": [
+		{
+			"listen": "prerequest",
+			"script": {
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		},
+		{
+			"listen": "test",
+			"script": {
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		}
+	]
+}
